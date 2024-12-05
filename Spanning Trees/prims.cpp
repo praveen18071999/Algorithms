@@ -1,5 +1,10 @@
 /*This algorithms is vertex based, choose the minimum weight edge everytime and make sure edges are connected and also check cycle detection using Union find disjoint set*/
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <map>
+#include <utility>
+#include <functional>
 using namespace std;
 
 int getParent(int i, int parent[])
@@ -79,7 +84,7 @@ int main()
 {
     int n, e;
     cin >> n >> e;
-    int v[n] = {0};
+    vector<int> v(n, 0);
     priority_queue<pair<int, pair<int, int>>, vector<pair<int, pair<int, int>>>, greater<pair<int, pair<int, int>>>> p;
     map<int, vector<pair<int, int>>> m;
     while (e--)
